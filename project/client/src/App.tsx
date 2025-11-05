@@ -5,8 +5,8 @@ import {
   VStack,
   Text,
   Table,
-  Thead,
   Tbody,
+  Thead,
   Tr,
   Th,
   Td,
@@ -26,15 +26,19 @@ export default function App() {
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = target - now;
+
       if (distance <= 0) return clearInterval(interval);
+
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
         (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
       setTimeLeft({ days, hours, minutes, seconds });
     }, 1000);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -46,19 +50,28 @@ export default function App() {
       display="flex"
       alignItems="center"
       justifyContent="center"
+      px={4}
     >
       <VStack spacing={10} textAlign="center">
-        <Heading size="2xl">⏳ Countdown</Heading>
-        <HStack spacing={5}>
+        <Heading size="2xl" letterSpacing="wide">
+          ⏳ Countdown
+        </Heading>
+
+        <HStack spacing={6}>
           {Object.entries(timeLeft).map(([label, value]) => (
             <Box
               key={label}
               bg="whiteAlpha.100"
               backdropFilter="blur(10px)"
               borderRadius="xl"
-              p={4}
+              p={5}
               minW="90px"
-              boxShadow="lg"
+              boxShadow="0 0 15px rgba(255,255,255,0.1)"
+              _hover={{
+                boxShadow: "0 0 25px rgba(255,255,255,0.2)",
+                transform: "scale(1.05)",
+              }}
+              transition="0.2s ease"
             >
               <Text fontSize="3xl" fontWeight="bold">
                 {value}
@@ -70,7 +83,14 @@ export default function App() {
           ))}
         </HStack>
 
-        <Box bg="whiteAlpha.100" p={6} borderRadius="xl" boxShadow="md">
+        <Box
+          bg="whiteAlpha.100"
+          p={6}
+          borderRadius="xl"
+          boxShadow="0 0 20px rgba(255,255,255,0.1)"
+          w="100%"
+          maxW="400px"
+        >
           <Table variant="simple" colorScheme="whiteAlpha">
             <Thead>
               <Tr>

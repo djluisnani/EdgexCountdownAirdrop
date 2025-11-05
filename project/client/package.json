@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^3.28.1",
+    "@chakra-ui/table": "^2.1.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@fontsource/orbitron": "^5.2.8",
     "@mantine/core": "^8.3.6",
     "@mantine/hooks": "^8.3.6",
     "framer-motion": "^12.23.24",
