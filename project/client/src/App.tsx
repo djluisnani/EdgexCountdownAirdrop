@@ -1,20 +1,9 @@
-import {
-  Box,
-  Heading,
-  HStack,
-  VStack,
-  Text,
-  Table,
-  Tbody,
-  Thead,
-  Tr,
-  Th,
-  Td,
-} from "@chakra-ui/react";
+import { Box, Heading, HStack, VStack, Text } from "@chakra-ui/react";
+import { Table, Tbody, Thead, Tr, Th, Td } from "@chakra-ui/table";
 import { useEffect, useState } from "react";
 
 export default function App() {
-  const target = new Date("2025-12-31T23:59:59").getTime();
+  const target = new Date("2025-12-03T07:00:00Z").getTime();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -54,7 +43,7 @@ export default function App() {
     >
       <VStack spacing={10} textAlign="center">
         <Heading size="2xl" letterSpacing="wide">
-          ⏳ Countdown
+          ⏳ Countdown to EdgeX airdrop
         </Heading>
 
         <HStack spacing={6}>
@@ -89,27 +78,67 @@ export default function App() {
           borderRadius="xl"
           boxShadow="0 0 20px rgba(255,255,255,0.1)"
           w="100%"
-          maxW="400px"
+          maxW="800px"
         >
           <Table variant="simple" colorScheme="whiteAlpha">
             <Thead>
+              <Th>airdrop allocation 25%</Th>
+              <Th>7 million points distributed</Th>
               <Tr>
-                <Th>Asset</Th>
-                <Th isNumeric>Value</Th>
+                <Th>FDV</Th>
+                <Th>FDV * airdrop allocation / points = 1 point value</Th>
+                <Th>Market Cap</Th>
+                <Th>100 points</Th>
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
-                <Td>BTC</Td>
-                <Td isNumeric>$68,900</Td>
+                <Td>$1,000,000,000</Td>
+                <Td>$36</Td>
+                <Td>$250,000,000</Td>
+                <Td>$3600</Td>
               </Tr>
               <Tr>
-                <Td>ETH</Td>
-                <Td isNumeric>$3,200</Td>
+                <Td>$2,000,000,000</Td>
+                <Td>$72</Td>
+                <Td>$500,000,000</Td>
+                <Td>$7200</Td>
               </Tr>
               <Tr>
-                <Td>SOL</Td>
-                <Td isNumeric>$190</Td>
+                <Td>$3,000,000,000</Td>
+                <Td>$107</Td>
+                <Td>$750,000,000</Td>
+                <Td>$10,700</Td>
+              </Tr>
+              <Tr>
+                <Td>$4,000,000,000</Td>
+                <Td>142</Td>
+                <Td>$1,000,000,000</Td>
+                <Td>$14,200</Td>
+              </Tr>
+              <Tr>
+                <Td>$5,000,000,000</Td>
+                <Td>$178</Td>
+                <Td>$1,250,000,000</Td>
+                <Td>$17,800</Td>
+              </Tr>
+              <Tr>
+                <Td>$10,000,000,000</Td>
+                <Td>$357</Td>
+                <Td>2,500,000,000</Td>
+                <Td>$35,700</Td>
+              </Tr>
+              <Tr>
+                <Td>$15,000,000,000</Td>
+                <Td>$535</Td>
+                <Td>$3,750,000,000</Td>
+                <Td>$53,500</Td>
+              </Tr>
+              <Tr>
+                <Td>$20,000,000,000</Td>
+                <Td>$714</Td>
+                <Td>$5,000,000,000</Td>
+                <Td>$71,400</Td>
               </Tr>
             </Tbody>
           </Table>
