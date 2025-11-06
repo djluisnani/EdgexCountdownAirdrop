@@ -111,8 +111,8 @@ export default function App() {
           borderRadius="xl"
           border="1px solid rgba(255,255,255,0.1)"
           boxShadow="0 0 25px rgba(0,0,0,0.3)"
-          w={{ base: "100%", md: "400px" }}
-          h={{ base: "auto", md: "300px" }}
+          w={{ base: "100%", md: "430px" }}
+          h={{ base: "auto", md: "330px" }}
           mb={{ base: 4, md: 0 }}
         >
           <Text fontSize="sm" mb={3} fontWeight="semibold" textAlign="center">
@@ -125,33 +125,39 @@ export default function App() {
                 <Th>Project Name</Th>
                 <Th isNumeric>FDV</Th>
                 <Th isNumeric>Value per Point</Th>
+                <Th isNumeric>Så mye får Bjørn</Th>
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
                 <Td>XRP</Td>
-                <Td isNumeric>$228,321,803,934</Td>
+                <Td>$228B</Td>
                 <Td isNumeric>$8154</Td>
+                <Td>25M NOK</Td>
               </Tr>
               <Tr>
                 <Td>SOLANA</Td>
-                <Td isNumeric>$99,756,692,310</Td>
+                <Td>$99B</Td>
                 <Td isNumeric>$3571</Td>
+                <Td>10,9M NOK</Td>
               </Tr>
               <Tr>
                 <Td>HYPE</Td>
-                <Td isNumeric>$41,611,770,391</Td>
+                <Td>$41B</Td>
                 <Td isNumeric>$1486</Td>
+                <Td>4,53M NOK</Td>
               </Tr>
               <Tr>
                 <Td>ASTER</Td>
-                <Td isNumeric>$8,917,210,633</Td>
+                <Td>$8.9B</Td>
                 <Td isNumeric>$317</Td>
+                <Td>970,000 NOK</Td>
               </Tr>
               <Tr>
                 <Td>PUMP</Td>
-                <Td isNumeric>$4,217,388,875</Td>
+                <Td>$4.2B</Td>
                 <Td isNumeric>$150</Td>
+                <Td>457,000 NOK</Td>
               </Tr>
             </Tbody>
           </Table>
@@ -167,7 +173,7 @@ export default function App() {
           border="1px solid rgba(255,255,255,0.1)"
           boxShadow="0 0 25px rgba(0,0,0,0.3)"
           w={{ base: "100%", md: "400px" }}
-          h={{ base: "auto", md: "300px" }}
+          h={{ base: "auto", md: "330px" }}
           mb={{ base: 4, md: 0 }}
         >
           <Text fontSize="md" mb={1} fontWeight="semibold">
