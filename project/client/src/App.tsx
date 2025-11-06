@@ -34,27 +34,59 @@ export default function App() {
   return (
     <Box
       minH="100vh"
-      bgGradient="linear(to-br, gray.900, gray.800, gray.700)"
+      bgGradient="linear(to-br, #0a0a0a, #141414, #1a1a1a)"
       color="white"
       display="flex"
       alignItems="center"
       justifyContent="center"
-      px={4}
+      px={{ base: 2, md: 6 }}
+      py={{ base: 6, md: 10 }}
+      position="relative"
+      overflow="hidden"
     >
-      <VStack spacing={10} textAlign="center">
-        <Heading size="2xl" letterSpacing="wide">
-          ⏳ Countdown to EdgeX airdrop
+      {/* Background gradient glows */}
+      <Box
+        position="absolute"
+        top="-10%"
+        left="-10%"
+        w="60vw"
+        h="60vw"
+        bg="purple.600"
+        filter="blur(150px)"
+        opacity={0.15}
+      />
+      <Box
+        position="absolute"
+        bottom="-10%"
+        right="-10%"
+        w="60vw"
+        h="60vw"
+        bg="cyan.500"
+        filter="blur(150px)"
+        opacity={0.15}
+      />
+
+      <VStack spacing={10} textAlign="center" w="full" maxW="1000px" zIndex={2}>
+        <Heading size={{ base: "lg", md: "2xl" }} letterSpacing="wide">
+          ⏳ Countdown to EdgeX Airdrop
         </Heading>
 
-        <HStack spacing={6}>
+        {/* Countdown Timer */}
+        <HStack
+          spacing={{ base: 2, md: 6 }}
+          flexWrap="wrap"
+          justify="center"
+          w="full"
+        >
           {Object.entries(timeLeft).map(([label, value]) => (
             <Box
               key={label}
-              bg="whiteAlpha.100"
+              bg="rgba(255,255,255,0.05)"
+              border="1px solid rgba(255,255,255,0.1)"
               backdropFilter="blur(10px)"
-              borderRadius="xl"
-              p={5}
-              minW="90px"
+              borderRadius="2xl"
+              p={{ base: 3, md: 5 }}
+              minW={{ base: "70px", md: "90px" }}
               boxShadow="0 0 15px rgba(255,255,255,0.1)"
               _hover={{
                 boxShadow: "0 0 25px rgba(255,255,255,0.2)",
@@ -62,7 +94,7 @@ export default function App() {
               }}
               transition="0.2s ease"
             >
-              <Text fontSize="3xl" fontWeight="bold">
+              <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">
                 {value}
               </Text>
               <Text textTransform="uppercase" fontSize="sm" opacity={0.8}>
@@ -72,18 +104,21 @@ export default function App() {
           ))}
         </HStack>
 
+        {/* Left Info Box */}
         <Box
-          position="absolute"
-          top={4}
-          left={4}
-          bg="whiteAlpha.100"
+          position={{ base: "relative", md: "absolute" }}
+          top={{ base: 0, md: 4 }}
+          left={{ base: 0, md: 4 }}
+          bg="rgba(255,255,255,0.05)"
           p={4}
           borderRadius="xl"
-          boxShadow="0 0 15px rgba(255,255,255,0.1)"
-          w="400px"
-          h="300px"
+          border="1px solid rgba(255,255,255,0.1)"
+          boxShadow="0 0 25px rgba(0,0,0,0.3)"
+          w={{ base: "100%", md: "400px" }}
+          h={{ base: "auto", md: "300px" }}
+          mb={{ base: 4, md: 0 }}
         >
-          <Text fontSize="sm" mb={2}>
+          <Text fontSize="sm" mb={3} fontWeight="semibold" textAlign="center">
             Value of one point with same market cap as:
           </Text>
 
@@ -121,38 +156,35 @@ export default function App() {
                 <Td isNumeric>$4,217,388,875</Td>
                 <Td isNumeric>$150</Td>
               </Tr>
-              <Tr>
-                <Td>XPL</Td>
-                <Td isNumeric>$3,221,817,994</Td>
-                <Td isNumeric>$115</Td>
-              </Tr>
             </Tbody>
           </Table>
         </Box>
 
         <Box
-          position="absolute"
-          top={4}
-          right={4}
-          bg="whiteAlpha.100"
+          position={{ base: "relative", md: "absolute" }}
+          top={{ base: 0, md: 4 }}
+          right={{ base: 0, md: 4 }}
+          bg="rgba(255,255,255,0.05)"
           p={4}
           borderRadius="xl"
-          boxShadow="0 0 15px rgba(255,255,255,0.1)"
-          w="400px"
-          h="300px"
+          border="1px solid rgba(255,255,255,0.1)"
+          boxShadow="0 0 25px rgba(0,0,0,0.3)"
+          w={{ base: "100%", md: "400px" }}
+          h={{ base: "auto", md: "300px" }}
+          mb={{ base: 4, md: 0 }}
         >
-          <Text fontSize="md" mb={2}>
-            Polymarket 1 day FDV prediction
+          <Text fontSize="md" mb={1} fontWeight="semibold">
+            Polymarket 1 Day FDV Prediction
           </Text>
-          <Text fontSize="xs" mb={2}>
-            updated every 24hr
+          <Text fontSize="xs" mb={3} opacity={0.7}>
+            Updated every 24h
           </Text>
 
           <Table variant="simple" size="sm" colorScheme="whiteAlpha">
             <Thead>
               <Tr>
                 <Th>FDV</Th>
-                <Th isNumeric>% CHANCE</Th>
+                <Th isNumeric>% Chance</Th>
               </Tr>
             </Thead>
             <Tbody>
@@ -173,25 +205,34 @@ export default function App() {
                 <Td isNumeric>37%</Td>
               </Tr>
               <Tr>
-                <Td>$1B</Td>
+                <Td>$5B</Td>
                 <Td isNumeric>35%</Td>
               </Tr>
             </Tbody>
           </Table>
         </Box>
 
+        {/* Main Table */}
         <Box
-          bg="whiteAlpha.100"
+          bg="rgba(255,255,255,0.05)"
+          border="1px solid rgba(255,255,255,0.1)"
           p={6}
           borderRadius="xl"
-          boxShadow="0 0 20px rgba(255,255,255,0.1)"
+          boxShadow="0 0 25px rgba(0,0,0,0.3)"
           w="100%"
           maxW="800px"
+          overflowX="auto"
         >
-          <Table variant="simple" colorScheme="whiteAlpha">
+          <Table
+            variant="simple"
+            colorScheme="whiteAlpha"
+            size={{ base: "sm", md: "md" }}
+          >
             <Thead>
-              <Th>airdrop allocation 25%</Th>
-              <Th>7 million points distributed</Th>
+              <Tr>
+                <Th>airdrop allocation 25%</Th>
+                <Th>7 million points distributed</Th>
+              </Tr>
               <Tr>
                 <Th>FDV</Th>
                 <Th>FDV * airdrop allocation / points = 1 point value</Th>
@@ -220,7 +261,7 @@ export default function App() {
               </Tr>
               <Tr>
                 <Td>$4,000,000,000</Td>
-                <Td>142</Td>
+                <Td>$142</Td>
                 <Td>$1,000,000,000</Td>
                 <Td>$14,200</Td>
               </Tr>
@@ -233,7 +274,7 @@ export default function App() {
               <Tr>
                 <Td>$10,000,000,000</Td>
                 <Td>$357</Td>
-                <Td>2,500,000,000</Td>
+                <Td>$2,500,000,000</Td>
                 <Td>$35,700</Td>
               </Tr>
               <Tr>
