@@ -1,10 +1,8 @@
 import { Box, Heading, HStack, VStack, Text } from "@chakra-ui/react";
 import { Table, Tbody, Thead, Tr, Th, Td } from "@chakra-ui/table";
 import { useEffect, useState } from "react";
-import { Analytics } from "@vercel/analytics/next";
 
 export default function App() {
-  <Analytics />;
   const target = new Date("2025-12-03T07:00:00Z").getTime();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
