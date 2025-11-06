@@ -1,6 +1,7 @@
 import { Box, Heading, HStack, VStack, Text } from "@chakra-ui/react";
 import { Table, Tbody, Thead, Tr, Th, Td } from "@chakra-ui/table";
 import { useEffect, useState } from "react";
+import { inject } from "@vercel/analytics";
 
 export default function App() {
   const target = new Date("2025-12-03T07:00:00Z").getTime();
@@ -10,6 +11,10 @@ export default function App() {
     minutes: 0,
     seconds: 0,
   });
+
+  useEffect(() => {
+    inject();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -162,7 +167,6 @@ export default function App() {
             </Tbody>
           </Table>
         </Box>
-
         <Box
           position={{ base: "relative", md: "absolute" }}
           top={{ base: 0, md: 4 }}
