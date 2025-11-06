@@ -141,8 +141,11 @@ export default function App() {
           w="400px"
           h="300px"
         >
-          <Text fontSize="sm" mb={2}>
+          <Text fontSize="md" mb={2}>
             Polymarket 1 day FDV prediction
+          </Text>
+          <Text fontSize="xs" mb={2}>
+            updated every 24hr
           </Text>
 
           <Table variant="simple" size="sm" colorScheme="whiteAlpha">
