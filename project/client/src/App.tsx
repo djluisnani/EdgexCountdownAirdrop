@@ -73,6 +73,111 @@ export default function App() {
         </HStack>
 
         <Box
+          position="absolute"
+          top={4}
+          left={4}
+          bg="whiteAlpha.100"
+          p={4}
+          borderRadius="xl"
+          boxShadow="0 0 15px rgba(255,255,255,0.1)"
+          w="400px"
+          h="300px"
+        >
+          <Text fontSize="sm" mb={2}>
+            Value of one point with same market cap as:
+          </Text>
+
+          <Table variant="simple" size="sm" colorScheme="whiteAlpha">
+            <Thead>
+              <Tr>
+                <Th>Project Name</Th>
+                <Th isNumeric>FDV</Th>
+                <Th isNumeric>Value per Point</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <Tr>
+                <Td>XRP</Td>
+                <Td isNumeric>$228,321,803,934</Td>
+                <Td isNumeric>$8154</Td>
+              </Tr>
+              <Tr>
+                <Td>SOLANA</Td>
+                <Td isNumeric>$99,756,692,310</Td>
+                <Td isNumeric>$3571</Td>
+              </Tr>
+              <Tr>
+                <Td>HYPE</Td>
+                <Td isNumeric>$41,611,770,391</Td>
+                <Td isNumeric>$1486</Td>
+              </Tr>
+              <Tr>
+                <Td>ASTER</Td>
+                <Td isNumeric>$8,917,210,633</Td>
+                <Td isNumeric>$317</Td>
+              </Tr>
+              <Tr>
+                <Td>PUMP</Td>
+                <Td isNumeric>$4,217,388,875</Td>
+                <Td isNumeric>$150</Td>
+              </Tr>
+              <Tr>
+                <Td>XPL</Td>
+                <Td isNumeric>$3,221,817,994</Td>
+                <Td isNumeric>$115</Td>
+              </Tr>
+            </Tbody>
+          </Table>
+        </Box>
+
+        <Box
+          position="absolute"
+          top={4}
+          right={4}
+          bg="whiteAlpha.100"
+          p={4}
+          borderRadius="xl"
+          boxShadow="0 0 15px rgba(255,255,255,0.1)"
+          w="400px"
+          h="300px"
+        >
+          <Text fontSize="sm" mb={2}>
+            Polymarket 1 day FDV prediction
+          </Text>
+
+          <Table variant="simple" size="sm" colorScheme="whiteAlpha">
+            <Thead>
+              <Tr>
+                <Th>FDV</Th>
+                <Th isNumeric>% CHANCE</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <Tr>
+                <Td>$1B</Td>
+                <Td isNumeric>87%</Td>
+              </Tr>
+              <Tr>
+                <Td>$2B</Td>
+                <Td isNumeric>63%</Td>
+              </Tr>
+              <Tr>
+                <Td>$3B</Td>
+                <Td isNumeric>47%</Td>
+              </Tr>
+              <Tr>
+                <Td>$4B</Td>
+                <Td isNumeric>37%</Td>
+              </Tr>
+              <Tr>
+                <Td>$1B</Td>
+                <Td isNumeric>35%</Td>
+              </Tr>
+            </Tbody>
+          </Table>
+        </Box>
+
+        <Box
           bg="whiteAlpha.100"
           p={6}
           borderRadius="xl"
