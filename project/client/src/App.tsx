@@ -44,7 +44,6 @@ export default function App() {
       position="relative"
       overflow="hidden"
     >
-      {/* Background gradient glows */}
       <Box
         position="absolute"
         top="-10%"
@@ -71,7 +70,6 @@ export default function App() {
           ⏳ Countdown to EdgeX Airdrop
         </Heading>
 
-        {/* Countdown Timer */}
         <HStack
           spacing={{ base: 2, md: 6 }}
           flexWrap="wrap"
@@ -218,7 +216,7 @@ export default function App() {
           borderRadius="xl"
           boxShadow="0 0 25px rgba(0,0,0,0.3)"
           w="100%"
-          maxW="800px"
+          maxW="1000px"
           overflowX="auto"
         >
           <Table
@@ -236,6 +234,7 @@ export default function App() {
                 <Th>FDV * airdrop allocation / points = 1 point value</Th>
                 <Th>Market Cap</Th>
                 <Th>100 points</Th>
+                <Th>Hvor mye penger får Bjørn?</Th>
               </Tr>
             </Thead>
             <Tbody>
@@ -244,48 +243,56 @@ export default function App() {
                 <Td>$36</Td>
                 <Td>$250,000,000</Td>
                 <Td>$3600</Td>
+                <Td>110,000 NOK</Td>
               </Tr>
               <Tr>
                 <Td>$2,000,000,000</Td>
                 <Td>$72</Td>
                 <Td>$500,000,000</Td>
                 <Td>$7200</Td>
+                <Td>219,000 NOK</Td>
               </Tr>
               <Tr>
                 <Td>$3,000,000,000</Td>
                 <Td>$107</Td>
                 <Td>$750,000,000</Td>
                 <Td>$10,700</Td>
+                <Td>326,000 NOK</Td>
               </Tr>
               <Tr>
                 <Td>$4,000,000,000</Td>
                 <Td>$142</Td>
                 <Td>$1,000,000,000</Td>
                 <Td>$14,200</Td>
+                <Td>433,000 NOK</Td>
               </Tr>
               <Tr>
                 <Td>$5,000,000,000</Td>
                 <Td>$178</Td>
                 <Td>$1,250,000,000</Td>
                 <Td>$17,800</Td>
+                <Td>543,000 NOK</Td>
               </Tr>
               <Tr>
                 <Td>$10,000,000,000</Td>
                 <Td>$357</Td>
                 <Td>$2,500,000,000</Td>
                 <Td>$35,700</Td>
+                <Td>1,1M NOK</Td>
               </Tr>
               <Tr>
                 <Td>$15,000,000,000</Td>
                 <Td>$535</Td>
                 <Td>$3,750,000,000</Td>
                 <Td>$53,500</Td>
+                <Td>1,63M NOK</Td>
               </Tr>
               <Tr>
                 <Td>$20,000,000,000</Td>
                 <Td>$714</Td>
                 <Td>$5,000,000,000</Td>
                 <Td>$71,400</Td>
+                <Td>2,2M NOK</Td>
               </Tr>
             </Tbody>
           </Table>
