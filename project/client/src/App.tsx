@@ -104,7 +104,6 @@ export default function App() {
           ))}
         </HStack>
 
-        {/* Left Info Box */}
         <Box
           position={{ base: "relative", md: "absolute" }}
           top={{ base: 0, md: 4 }}
@@ -212,7 +211,6 @@ export default function App() {
           </Table>
         </Box>
 
-        {/* Main Table */}
         <Box
           bg="rgba(255,255,255,0.05)"
           border="1px solid rgba(255,255,255,0.1)"
