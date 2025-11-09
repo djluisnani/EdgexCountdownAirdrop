@@ -192,23 +192,27 @@ export default function App() {
             <Tbody>
               <Tr>
                 <Td>$1B</Td>
-                <Td isNumeric>85%</Td>
+                <Td isNumeric>86%</Td>
               </Tr>
               <Tr>
                 <Td>$2B</Td>
-                <Td isNumeric>64%</Td>
+                <Td isNumeric>66%</Td>
               </Tr>
               <Tr>
                 <Td>$3B</Td>
-                <Td isNumeric>47%</Td>
+                <Td isNumeric>44%</Td>
               </Tr>
               <Tr>
                 <Td>$4B</Td>
-                <Td isNumeric>38%</Td>
+                <Td isNumeric>39%</Td>
               </Tr>
               <Tr>
                 <Td>$5B</Td>
-                <Td isNumeric>31%</Td>
+                <Td isNumeric>33%</Td>
+              </Tr>
+              <Tr>
+                <Td>$10B</Td>
+                <Td isNumeric>8%</Td>
               </Tr>
             </Tbody>
           </Table>
